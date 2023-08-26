@@ -10,10 +10,12 @@ class SplashPage extends StatefulWidget {
 
 class SplashPageController extends State<SplashPage> {
   //logic pieces here
+  String splashTitle = '';
 
   @override
   void initState() {
     super.initState();
+    splashTitle = widget.title;
   }
 
   @override
@@ -26,6 +28,12 @@ class _SplashPageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Column(children: [
+        Text(state.splashTitle),
+        IconButton(onPressed: ()=>{}, 
+        icon: Icon(Icons.storm_rounded))
+      ]),
+    );
   }
 }
