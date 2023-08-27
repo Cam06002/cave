@@ -22,10 +22,10 @@ class _BaseCampView extends StatelessWidget {
   const _BaseCampView(this.state);
 
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body:Column(
         children: [
-          Padding(padding: EdgeInsets.all(10),
+          const Padding(padding: EdgeInsets.all(10),
           child: Row(
                 children: [
                   Center(
@@ -35,7 +35,16 @@ class _BaseCampView extends StatelessWidget {
                     ),
                   ),
                 ],
-              ),)
+              ),),
+          const Padding(padding: EdgeInsets.all(10),
+          child: Row(children: [
+            //dialog here
+          ],),),
+          Padding(padding: const EdgeInsets.all(10),
+          child: Row(children: [
+            TextButton(onPressed: ()=>{}, 
+            child: const Text('Next'))
+          ],),)
         ],
       ),
     );
